@@ -4,7 +4,7 @@
   "routes": [{ "src": "/(.*)", "dest": "./index.js" }],
   "env": {
     "DATA_BASE": "mongodb+srv://alfaelkanas:AHMED.ALFA.ELKANAS@cluster0.gnoyf.mongodb.net/travel?retryWrites=true&w=majority&appName=Cluster0",
-    "PORT": 8000,
+    "PORT": "8000",
     "appName": "Cluster0",
     "JWT_SECRET_KEY": "foodstuffs-secret-key-my-ultra-secret-key-long-secret-key",
     "JWT_EXPIRES_IN": "90d",
