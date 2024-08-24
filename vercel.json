@@ -1,5 +1,15 @@
 {
   "version": 2,
   "builds": [{ "src": "./*.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "./index.js" }]
+  "routes": [{ "src": "/(.*)", "dest": "./index.js" }],
+  "env": {
+    "DATA_BASE": "mongodb+srv://alfaelkanas:AHMED.ALFA.ELKANAS@cluster0.gnoyf.mongodb.net/travel?retryWrites=true&w=majority&appName=Cluster0",
+    "PORT": 8000,
+    "appName": "Cluster0",
+    "JWT_SECRET_KEY": "foodstuffs-secret-key-my-ultra-secret-key-long-secret-key",
+    "JWT_EXPIRES_IN": "90d",
+    "CLOUDINARY_CLOUD_NAME": "duumkzqwx",
+    "CLOUDINARY_API_KEY": "582181163874144",
+    "CLOUDINARY_API_SECRET": "F90ksfH8lQrEYqFV_EPa3wTdVvs"
+  }
 }
