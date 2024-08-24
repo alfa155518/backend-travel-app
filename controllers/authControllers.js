@@ -66,7 +66,7 @@ const signUp = async (req, res) => {
 const login = async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
-    // console.log(user);
+
     if (!user) return res.status(404).json({ message: "User not found" });
 
     //1) Check if there headers authorization
@@ -83,7 +83,7 @@ const login = async (req, res) => {
     const { data } = await jwt.verify(token, process.env.JWT_SECRET_KEY);
     //4) Check if user still exists
     const currentUser = await User.findById(data);
-    console.log(currentUser);
+
     if (!currentUser)
       return res.status(401).json({ message: "Not authorized" });
 
@@ -102,7 +102,6 @@ const login = async (req, res) => {
       user: currentUser,
     });
   } catch (error) {
-    console.error(error);
     return res.status(500).json({ message: "Server Error" });
   }
 };

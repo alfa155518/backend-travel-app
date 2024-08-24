@@ -11,7 +11,6 @@ const addReview = async (req, res) => {
       review: newReview,
     });
   } catch (error) {
-    console.error(error);
     res.status(500).json({
       success: false,
       message: "Server error",

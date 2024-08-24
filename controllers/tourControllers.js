@@ -18,13 +18,12 @@ const getTour = async (req, res) => {
         path: "reviews",
         select: "-__v",
       });
-      
+
     if (!tour)
       return res.status(404).json({ status: "fail", msg: "Tour not found" });
 
     res.status(200).json({ status: "success", data: tour });
   } catch (err) {
-    console.error(err);
     res.status(500).json({ status: "fail", msg: "Server Error" });
   }
 };
@@ -41,7 +40,6 @@ const allTours = async (req, res) => {
       .status(200)
       .json({ status: "success", result: tours.length, data: tours });
   } catch (err) {
-    console.error(err);
     res.status(500).json({ status: "fail", msg: "Server Error" });
   }
 };
